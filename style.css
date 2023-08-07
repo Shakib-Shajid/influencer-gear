@@ -3,7 +3,9 @@
 }
 
 :root {
-    --font-color: var(--font-color);
+    --font-color: #3A3A3A;
+    --font-size: 24px;
+    --card-color: #787885;
 }
 
 
@@ -19,7 +21,7 @@ nav {
 nav h3 {
     color: var(--font-color);
     font-family: Poppins;
-    font-size: 24px;
+    font-size: var(--font-size);
     font-weight: 700;
 }
 
@@ -98,10 +100,6 @@ main {
 
 /* sponsor style */
 
-/* .sponsor {
-    padding: 100px 165px;
-} */
-
 .sponsor hr {
     height: 1px;
     color: rgba(192, 204, 218, 0.10);
@@ -115,6 +113,52 @@ main {
 /* collection styles */
 .collection {
     margin: 100px 0;
+}
+
+.collection-title {
+    text-align: center;
+    color: var(--font-color);
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+    margin-bottom: 1.87rem;
+    /* 250% */
+}
+
+/* collection card */
+
+.card {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.card-body {
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-body p {
+    width: 200px;
+}
+
+.card-title,
+.card-price {
+    margin-bottom: 6px;
+    font-size: var(--font-size);
+}
+
+.card-desc {
+    margin-top: 5px;
+    font-weight: 700;
+    color: var(--card-color);
 }
 
 
@@ -197,6 +241,21 @@ main {
         padding: 0px 20px;
         width: 50px;
         height: 40px;
+    }
+
+    .collection {
+        margin: 1rem;
+    }
+
+    .collection-title {
+        font-size: 16px;
+        margin-bottom: 0;
+
+    }
+
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
     }
 
 
